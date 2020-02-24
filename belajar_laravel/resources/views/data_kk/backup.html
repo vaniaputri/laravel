@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script type="text/javascript" src></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+		$( function() {
+			$( "#datepicker" ).datepicker();
+		} );
+	</script>
+</head>
+<body>
+	<div class="container">
+		<h1>Insert Data Kartu Keluarga</h1>
+		<!-- /data_kk/create -->
+		<!-- 	<form action="" method="POST"> -->
+			<input type="hidden" name="_token" value="{{ csrf_token() }}">
+			<div class="row">
+				<div class="col-6">
+					<div class="form-group">
+						<label for="nama_kepala_keluarga">Nama Kepala Keluarga</label>
+						<input type="nama_kepala_keluarga" class="form-control" id="nama_kepala_keluarga" name="nama_kepala_keluarga" placeholder="Nama Kepala Keluarga">
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="form-group">
+						<label for="kecamatan">Kecamatan</label>
+						<input type="kecamatan" class="form-control" id="kecamatan" name="kecamatan" placeholder="Kecamatan">
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-6">
+					<div class="form-group">
+						<label for="alamat">Alamat</label>
+						<input type="alamat" class="form-control" id="alamat" name="alamat"placeholder="Alamat">
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="form-group">
+						<label for="kabupaten_kota">Kabupaten/Kota</label>
+						<input type="kabupaten_kota" class="form-control" id="kabupaten_kota" name="kabupaten_kota" placeholder="Kabupaten/Kota">
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-6">
+					<div class="form-group">
+						<label for="rt_rw">RT/RW</label>
+						<input type="rt_rw" class="form-control" id="rt_rw" name="rt_rw" placeholder="RT/RW">
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="form-group">
+						<label for="kode_pos">Kode Pos</label>
+						<input type="kode_pos" class="form-control" id="kode_pos" name="kode_pos" placeholder="Kode Pos">
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-6">
+					<div class="form-group">
+						<label for="desa_kelurahan">Desa/Kelurahan</label>
+						<input type="desa_kelurahan" class="form-control" id="desa_kelurahan" name="desa_kelurahan" placeholder="Desa/Kelurahan">
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="form-group">
+						<label for="provinsi">Provinsi</label>
+						<input type="provinsi" class="form-control" id="provinsi" name="provinsi" placeholder="Provinsi">
+					</div>
+				</div>
+			</div>
+
+			<!--DETAIL PERTAMA-->
+			<div class="card">
+				<div class="card-header">
+					Detail Kartu Keluarga
+				</div>
+				<div class="card-body">
+					<!--1-->
+					<div class="row">
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="no">No</label>
+								<input type="no" class="form-control" id="no" name="no" placeholder="No">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="nama_lengkap">Nama Lengkap</label>
+								<input type="nama_lengkap" class="form-control" id="nama_lengkap" name="nama_lengkap" placeholder="Nama Lengkap">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="nik">NIK</label>
+								<input type="nik" class="form-control" id="nik" name="nik" placeholder="NIK">
+							</div>
+						</div>
+					</div>
+					<!--2-->
+					<div class="row">
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="jenis_kel">Jenis Kelamin</label>
+								<select class="form-control" id="jenis_kelamin">
+									<option>Laki-laki</option>
+									<option>Perempuan</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="tempat_lahir">Tempat Lahir</label>
+								<input type="tempat_lahir" class="form-control" id="tempat_lahir" name="tempat_lahir" placeholder="Tempat Lahir">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="tgl_lahir">Tanggal Lahir</label>
+								<input placeholder="Tanggal Lahir" type="text" id="datepicker" class="form-control datepicker">
+							</div>
+						</div>
+					</div>
+					<!--3-->
+					<div class="row">
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="agama">Agama</label>
+								<select class="form-control" id="agama">
+									<option>Kristen</option>
+									<option>Katolik</option>
+									<option>Islam</option>
+									<option>Budha</option>
+									<option>Hindu</option>
+									<option>Konghucu</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="pendidikan">Pendidikan</label>
+								<select class="form-control" id="pendidikan">
+									<option>SD</option>
+									<option>SMP</option>
+									<option>SMA</option>
+									<option>Strata 1</option>
+									<option>Strata 2</option>
+									<option>Strata 3</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="jenis_pekerjaan">Jenis Pekerjaan</label>
+								<input type="jenis_pekerjaan" class="form-control" id="jenis_pekerjaan" name="jenis_pekerjaan" placeholder="Jenis Pekerjaan">
+							</div>
+						</div>
+					</div>
+
+					<!--4-->
+					<div class="row">
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="status_pernikahan">Status Pernikahan</label>
+								<select class="form-control" id="status_pernikahan">
+									<option>Menikah</option>
+									<option>Tidak Menikah</option>
+									<option>Duda</option>
+									<option>Janda</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="status_dlm_keluarga">Status Hubungan Dalam Keluarga</label>
+								<input type="status_dlm_keluarga" class="form-control" id="status_dlm_keluarga" name="kewarstatus_dlm_keluargaganegaraan" placeholder="Status Hubungan Dalam Keluarga">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="kewarganegaraan">Kewarganegaraan</label>
+								<input type="kewarganegaraan" class="form-control" id="kewarganegaraan" name="kewarganegaraan" placeholder="Kewarganegaraan">
+							</div>
+						</div>
+					</div>
+					<!--5-->
+					<div class="row">
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="paspor">Dokumen Imigrasi(No Paspor)</label>
+								<input type="paspor" class="form-control" id="paspor" name="paspor" placeholder="No Paspor">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="kitas">Dokumen Imigrasi(No KITAS/KITAP)</label>
+								<input type="kitas" class="form-control" id="kitas" name="kitas" placeholder="No KITAS">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="nama_ayah">Nama Ayah</label>
+								<input type="nama_ayah" class="form-control" id="nama_ayah" name="nama_ayah" placeholder="Nama Ayah">
+							</div>
+						</div>
+					</div>
+					<!--6-->
+					<div class="row">
+						<div class="col-4">
+							<div class="form-group">
+								<label for="nama_ibu">Nama Ibu</label>
+								<input type="nama_ibu" class="form-control" id="nama_ibu" name="nama_ibu" placeholder="Nama Ibu">
+							</div>
+						</div>
+					</div>
+					<button id="add_row" class="btn btn-danger pull-left">Add Row</button>
+				</div>
+				<div class="table-responsive text-nowrap">
+					<table class="table" id="detail_kk">
+						<thead>
+							<tr>
+								<th>Nomor</th>
+								<th>Nama Lengkap</th>
+								<th>NIK</th>
+								<th>Jenis Kelamin</th>
+								<th>Tempat Lahir</th>
+								<th>Tanggal Lahir</th>
+								<th>Agama</th>
+								<th>Pendidikan</th>
+								<th>Jenis Pekerjaan</th>
+								<th>Status Pernikahan</th>
+								<th>Status Hubungan Dalam Keluarga</th>
+								<th>Kewarganegaraan</th>
+								<th>Dokumen Imigrasi(No Paspor)</th>
+								<th>Dokumen Imigrasi(No KITAS/KITAP)</th>
+								<th>Nama Ayah</th>
+								<th>Nama Ibu</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr id="detail_kk">
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<button type="submit" class="btn btn-primary" id="insert" style="margin: 20px">Insert Data</button>
+			<pre></pre>
+		</div>
+	</div>
+</form>
+</div>
+<script>
+	$(document).ready(function(){
+		var myData = [];
+		$("#add_row"). click(function(){
+			var no = $("#no").val();
+			var nama_lengkap = $("#nama_lengkap").val();
+			var nik = $("#nik").val();
+			var jenis_kelamin = $("#jenis_kelamin").val();
+			var tempat_lahir = $("#tempat_lahir").val();
+			var tgl_lahir = $("#datepicker").val();
+			var agama = $("#agama").val();
+			var pendidikan = $("#pendidikan").val();
+			var jenis_pekerjaan = $("#jenis_pekerjaan").val();
+			var status_pernikahan = $("#status_pernikahan").val();
+			var status_dlm_keluarga = $("#status_dlm_keluarga").val();
+			var kewarganegaraan = $("#kewarganegaraan").val();
+			var paspor = $("#paspor").val();
+			var kitas = $("#kitas").val();
+			var nama_ayah = $("#nama_ayah").val();
+			var nama_ibu = $("#nama_ibu").val();
+			var detail = "<tr><td>"+no+"</td><td>" + nama_lengkap + "</td><td>" + nik + "</td><td>"+jenis_kelamin+"</td><td>" + tempat_lahir + "</td><td>" + tgl_lahir + "</td><td>"+agama+"</td><td>" + pendidikan + "</td><td>" + jenis_pekerjaan + "</td><td>"+status_pernikahan+"</td><td>" + status_dlm_keluarga + "</td><td>" + kewarganegaraan + "</td><td>" + paspor + "</td><td>"+kitas+"</td><td>" + nama_ayah + "</td><td>" + nama_ibu + "</td></tr>";
+			$("#detail_kk").append(detail);
+			
+			var obj = {};
+			var myObj={};
+			myObj.no=no;
+			myObj.nama_lengkap=nama_lengkap;
+			myObj.nik=nik;
+			myObj.jenis_kelamin=jenis_kelamin;
+			myObj.tempat_lahir=tempat_lahir;
+			myObj.tgl_lahir=tgl_lahir;
+			myObj.agama=agama;
+			myObj.pendidikan=pendidikan;
+			myObj.jenis_pekerjaan=jenis_pekerjaan;
+			myObj.status_pernikahan=status_pernikahan;
+			myObj.status_dlm_keluarga=status_dlm_keluarga;
+			myObj.kewarganegaraan=kewarganegaraan;
+			myObj.paspor=paspor;
+			myObj.kitas=kitas;
+			myObj.nama_ayah=nama_ayah;
+			myObj.nama_ibu=nama_ibu;
+
+			for(var key in myObj) {
+			  if(myObj[key] !== '') {
+			    obj[key] = myObj[key];
+			  }
+			}
+
+			myData.push(obj);
+			$('pre').html(JSON.stringify(myData,null,4));
+		});
+	});
+</script>
+</body>
+</html>
+
